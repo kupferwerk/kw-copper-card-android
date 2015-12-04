@@ -120,9 +120,9 @@ public class LoginActivity extends AppCompatActivity {
                   public void onResponse(Response<User> response, Retrofit retrofit) {
 //                     String userId = response.body()
 //                           .getUserId();
-                     Toast.makeText(LoginActivity.this, response.body()
-                           .getColor(), Toast.LENGTH_SHORT)
-                           .show();
+//                     Toast.makeText(LoginActivity.this, response.body()
+//                           .getColor(), Toast.LENGTH_SHORT)
+//                           .show();
                   }
 
                   @Override

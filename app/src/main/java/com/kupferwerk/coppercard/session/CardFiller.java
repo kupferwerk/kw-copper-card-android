@@ -1,5 +1,7 @@
 package com.kupferwerk.coppercard.session;
 
+import android.graphics.Color;
+import android.graphics.drawable.GradientDrawable;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -24,6 +26,15 @@ public class CardFiller {
 
         txtHeader.setText(value);
         txtValue.setText(value);
+    }
+
+    public static GradientDrawable createCardBackground(int color, int radius) {
+        GradientDrawable drawable = new GradientDrawable();
+        drawable.setColor(color);
+        drawable.setStroke(radius, Color.WHITE);
+        drawable.setCornerRadius(radius);
+
+        return drawable;
     }
 
 }

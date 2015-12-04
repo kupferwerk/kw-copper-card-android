@@ -1,5 +1,6 @@
 package com.kupferwerk.coppercard.session;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -29,12 +30,14 @@ public class SessionActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        selectedCard.setBackground(CardFiller.createCardBackground(Color.parseColor("#6b2aec"), getResources().getDimensionPixelSize(R.dimen.card_radius)));
+
         initCardList();
     }
 
     private void initCardList() {
         RecyclerView list = (RecyclerView) findViewById(R.id.card_list);
-        DeckAdapter adapter = new DeckAdapter(this, CardDeck.FIBONACCI);
+        DeckAdapter adapter = new DeckAdapter(this, CardDeck.FIBONACCI, Color.parseColor("#6b2aec"));
         adapter.setOnItemSelectedListener(new DeckAdapter.OnItemSelectedListener() {
             @Override
             public void onItemSelected(final View itemView, final String value) {

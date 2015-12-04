@@ -32,6 +32,7 @@ public class DeckAdapter extends RecyclerView.Adapter<DeckAdapter.ViewHolder> {
             super(itemView);
 
             this.itemView = itemView;
+
             ButterKnife.bind(this, itemView);
         }
     }
@@ -44,11 +45,13 @@ public class DeckAdapter extends RecyclerView.Adapter<DeckAdapter.ViewHolder> {
     private OnItemSelectedListener lisener;
 
     private CardDeck deck;
+    private int color;
     private Context context;
 
-    public DeckAdapter(Context context, int presetId) {
+    public DeckAdapter(Context context, int presetId, int color) {
         this.deck = CardDeck.build(context, presetId);
         this.context = context;
+        this.color = color;
     }
 
     public void setOnItemSelectedListener(OnItemSelectedListener listener) {
@@ -58,6 +61,7 @@ public class DeckAdapter extends RecyclerView.Adapter<DeckAdapter.ViewHolder> {
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(context).inflate(R.layout.item_small_card, parent, false);
+        itemView.setBackground(CardFiller.createCardBackground(color, context.getResources().getDimensionPixelSize(R.dimen.card_radius_small)));
         return new ViewHolder(itemView);
     }
 
