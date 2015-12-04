@@ -41,6 +41,7 @@ public class SessionActivity extends AppCompatActivity {
                 if (value.equals(selectedValue)) {
                     return;
                 }
+                selectedValue = value;
                 selectedCard.setVisibility(View.VISIBLE);
                 ImageView imgHeader = (ImageView) selectedCard.findViewById(R.id.img_value_header);
                 ImageView imgValue = (ImageView) selectedCard.findViewById(R.id.img_value);
