@@ -1,4 +1,4 @@
-package packagename.app.com.appname.core;
+package com.kupferwerk.coppercard.core;
 
 import android.app.Activity;
 import android.app.Application;
@@ -10,8 +10,8 @@ import net.hockeyapp.android.Tracking;
 import net.hockeyapp.android.UpdateActivity;
 import net.hockeyapp.android.UpdateManager;
 
-import packagename.app.com.appname.BuildConfig;
-import packagename.app.com.appname.R;
+import com.kupferwerk.coppercard.appname.BuildConfig;
+import com.kupferwerk.coppercard.appname.R;
 
 public class CrashTracker implements Application.ActivityLifecycleCallbacks {
    private final Application application;

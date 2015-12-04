@@ -1,4 +1,4 @@
-package packagename.app.com.appname.core.logging;
+package com.kupferwerk.coppercard.core.logging;
 
 import android.util.Log;
 

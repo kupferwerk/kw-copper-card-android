@@ -1,4 +1,4 @@
-package packagename.app.com.appname.core.module;
+package com.kupferwerk.coppercard.core.module;
 
 import android.content.Context;
 
@@ -13,9 +13,9 @@ import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
-import packagename.app.com.appname.BuildConfig;
-import packagename.app.com.appname.R;
-import packagename.app.com.appname.core.logging.LoggingInterceptor;
+import com.kupferwerk.coppercard.appname.BuildConfig;
+import com.kupferwerk.coppercard.appname.R;
+import com.kupferwerk.coppercard.core.logging.LoggingInterceptor;
 import retrofit.GsonConverterFactory;
 import retrofit.Retrofit;
 

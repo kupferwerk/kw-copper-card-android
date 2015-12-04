@@ -1,4 +1,4 @@
-package packagename.app.com.appname.core.module;
+package com.kupferwerk.coppercard.core.module;
 
 import android.test.AndroidTestCase;
 
@@ -13,13 +13,13 @@ public class ApplicationModuleTest extends AndroidTestCase {
    protected void setUp() throws Exception {
       super.setUp();
       applicationModule = new ApplicationModule(
-            (packagename.app.com.appname.core.BaseApplication) getContext()
+            (com.kupferwerk.coppercard.core.BaseApplication) getContext()
                   .getApplicationContext());
    }
 
    public void testProvideCrashTracker() {
       assertThat(applicationModule.provideCrashTracker(
-            (packagename.app.com.appname.core.BaseApplication) getContext()
+            (com.kupferwerk.coppercard.core.BaseApplication) getContext()
                   .getApplicationContext()), notNullValue());
    }
 }

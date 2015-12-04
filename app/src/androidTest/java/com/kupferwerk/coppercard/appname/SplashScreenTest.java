@@ -1,6 +1,8 @@
-package packagename.app.com.appname;
+package com.kupferwerk.coppercard.appname;
 
 import android.test.ActivityInstrumentationTestCase2;
+
+import com.kupferwerk.coppercard.SplashScreen;
 
 public class SplashScreenTest extends ActivityInstrumentationTestCase2<SplashScreen> {
 
@@ -8,18 +10,6 @@ public class SplashScreenTest extends ActivityInstrumentationTestCase2<SplashScr
 
    public SplashScreenTest() {
       super(SplashScreen.class);
-   }
-
-   public void testCrashTracker() {
-      assertNotNull(activity.crashTracker);
-   }
-
-   public void testPicasso() throws Exception {
-      assertNotNull(activity.picasso);
-   }
-
-   public void testRestAdapter() throws Exception {
-      assertNotNull(activity.restAdapter);
    }
 
    @Override

@@ -1,4 +1,4 @@
-package packagename.app.com.appname.core;
+package com.kupferwerk.coppercard.core;
 
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
@@ -7,8 +7,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.ViewGroup;
 
-import packagename.app.com.appname.R;
-import packagename.app.com.appname.core.activitiy.AdjustStatusbar;
+import com.kupferwerk.coppercard.appname.R;
+import com.kupferwerk.coppercard.core.activitiy.AdjustStatusbar;
 
 /**
  * Extend this class if you have a standard action bar behaviour. You have to override

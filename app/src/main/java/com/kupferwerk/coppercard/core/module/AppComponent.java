@@ -1,12 +1,12 @@
-package packagename.app.com.appname.core.module;
+package com.kupferwerk.coppercard.core.module;
 
 import android.content.Context;
 
 import javax.inject.Singleton;
 
 import dagger.Component;
-import packagename.app.com.appname.SplashScreen;
-import packagename.app.com.appname.core.BaseApplication;
+import com.kupferwerk.coppercard.SplashScreen;
+import com.kupferwerk.coppercard.core.BaseApplication;
 
 @Singleton
 @Component (modules = { ApplicationModule.class, WebserviceModule.class })

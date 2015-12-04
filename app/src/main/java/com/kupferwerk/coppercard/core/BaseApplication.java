@@ -1,4 +1,4 @@
-package packagename.app.com.appname.core;
+package com.kupferwerk.coppercard.core;
 
 import android.app.Application;
 

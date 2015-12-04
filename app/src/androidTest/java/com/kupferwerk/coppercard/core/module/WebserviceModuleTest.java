@@ -1,4 +1,4 @@
-package packagename.app.com.appname.core.module;
+package com.kupferwerk.coppercard.core.module;
 
 import android.test.AndroidTestCase;
 

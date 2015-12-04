@@ -1,4 +1,4 @@
-package packagename.app.com.appname.core.activitiy;
+package com.kupferwerk.coppercard.core.activitiy;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
-import packagename.app.com.appname.R;
+import com.kupferwerk.coppercard.appname.R;
 
 public class AdjustStatusbar {
 

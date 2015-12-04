@@ -1,14 +1,15 @@
-package packagename.app.com.appname;
+package com.kupferwerk.coppercard;
 
 import android.os.Bundle;
 
+import com.kupferwerk.coppercard.appname.R;
 import com.squareup.picasso.Picasso;
 
 import javax.inject.Inject;
 
-import packagename.app.com.appname.core.BaseActionBarActivity;
-import packagename.app.com.appname.core.CrashTracker;
-import packagename.app.com.appname.core.Injector;
+import com.kupferwerk.coppercard.core.BaseActionBarActivity;
+import com.kupferwerk.coppercard.core.CrashTracker;
+import com.kupferwerk.coppercard.core.Injector;
 import retrofit.Retrofit;
 
 public class SplashScreen extends BaseActionBarActivity {
