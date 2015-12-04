@@ -3,6 +3,7 @@
 
     <string name="app_name">Planning Poker</string>
     <string name="title_activity_splash_screen">SplashScreen</string>
+    <string name="title_activity_login_screen">Copper Card</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_login">Sign in</string>
 
@@ -14,5 +15,8 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <string name="ios">iOS</string>
+    <string name="android">Android</string>
+    <string name="windows">Windows</string>
 
 </resources>
