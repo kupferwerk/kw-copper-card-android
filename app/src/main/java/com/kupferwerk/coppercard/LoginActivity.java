@@ -101,16 +101,20 @@ public class LoginActivity extends AppCompatActivity {
             } else {
                sessionsNames.add("DawgItem");
             }
-            root.invalidate();
+            initList(sessionsNames);
             spinner.setVisibility(View.GONE);
          }
 
          @Override
          public void onFailure(Throwable t) {
             Toast.makeText(LoginActivity.this, "Smthin went wrong dawgiie", Toast.LENGTH_SHORT)
-                  .show();
+                    .show();
          }
       });
+      initList(sessionsNames);
+   }
+
+   private void initList(ArrayList<String> sessionsNames) {
       ArrayAdapter<String> adapter =
             new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, sessionsNames);
       listView.setAdapter(adapter);
@@ -118,18 +122,18 @@ public class LoginActivity extends AppCompatActivity {
          @Override
          public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             if (!email.getText()
-                  .toString()
-                  .isEmpty()) {
+                    .toString()
+                    .isEmpty()) {
                String uuid = UUID.randomUUID()
-                     .toString();
+                       .toString();
                User user = new User(getSessionId(), email.getText()
-                     .toString(), "", getPlattform(), uuid);
+                       .toString(), "", getPlattform(), uuid);
                sharedPreferences.edit()
-                     .putString(KEY_UUID, uuid)
-                     .apply();
+                       .putString(KEY_UUID, uuid)
+                       .apply();
                CopperCardService service = restAdapter.create(CopperCardService.class);
                Call<User> call =
-                     service.createUser(user.getName(), user.getPlatform(), user.getUuid());
+                       service.createUser(user.getName(), user.getPlatform(), user.getUuid());
                call.enqueue(new Callback<User>() {
                   @Override
                   public void onResponse(Response<User> response, Retrofit retrofit) {
@@ -138,8 +142,8 @@ public class LoginActivity extends AppCompatActivity {
                   @Override
                   public void onFailure(Throwable t) {
                      Toast.makeText(LoginActivity.this, "Smthin went wrong dawgiie",
-                           Toast.LENGTH_SHORT)
-                           .show();
+                             Toast.LENGTH_SHORT)
+                             .show();
                      UUID.randomUUID();
                   }
                });
@@ -147,8 +151,8 @@ public class LoginActivity extends AppCompatActivity {
                startActivity(intent);
             } else {
                Toast.makeText(LoginActivity.this, "Please fill out everything! dawg",
-                     Toast.LENGTH_SHORT)
-                     .show();
+                       Toast.LENGTH_SHORT)
+                       .show();
             }
          }
       });
