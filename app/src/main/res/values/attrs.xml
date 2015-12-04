@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="Card">
+        <attr name="corner_radiud" format="dimension"/>
+        <attr name="bg_color" format="color"/>
+        <attr name="header_color" format="color"/>
+
+
+    </declare-styleable>
+</resources>
