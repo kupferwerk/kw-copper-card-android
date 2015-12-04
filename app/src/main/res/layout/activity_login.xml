@@ -10,8 +10,6 @@
               android:paddingTop="@dimen/activity_vertical_margin"
               tools:context="com.kupferwerk.coppercard.LoginActivity">
 
-
-    <include layout="@layout/item_card"/>
     <!-- Login progress -->
     <ProgressBar
         android:id="@+id/login_progress"
