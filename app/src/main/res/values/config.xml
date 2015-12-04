@@ -2,7 +2,7 @@
     <!-- enter your hockey app id here -->
     <string name="hockey_app_id">1234567890abcdef1234567890abcdef</string>
     <string name="base_url">@string/staging_base_url</string>
-    <string name="staging_base_url">http://staging.baseurl.example.com</string>
+    <string name="staging_base_url">http://coppercards-twitterstream2.rhcloud.com/</string>
 
 
     <string-array name="fibonacci">

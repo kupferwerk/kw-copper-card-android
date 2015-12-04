@@ -9,6 +9,16 @@ public class User implements Parcelable {
    private String name;
    private String image;
    private String platform;
+   private String userId;
+   private String color;
+
+   public String getUserId() {
+      return userId;
+   }
+
+   public String getColor() {
+      return color;
+   }
 
    public User(String sessionId, String name, String image, String platform) {
       this.sessionId = sessionId;
