@@ -2,14 +2,17 @@ package com.kupferwerk.coppercard;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -35,6 +38,7 @@ import retrofit.Retrofit;
 
 public class LoginActivity extends AppCompatActivity {
 
+   private static final String KEY_UUID = "uuid_user";
    @Bind (R.id.name)
    TextView email;
    @Bind (R.id.profilePic)
@@ -47,9 +51,13 @@ public class LoginActivity extends AppCompatActivity {
    Toolbar toolbar;
    @Bind (R.id.listView)
    ListView listView;
-
+   @Bind (R.id.spinner)
+   ProgressBar spinner;
    @Inject
    Retrofit restAdapter;
+
+   @Inject
+   SharedPreferences sharedPreferences;
 
    private String getPlattform() {
       if (btnAndroid.isChecked()) {
@@ -79,7 +87,7 @@ public class LoginActivity extends AppCompatActivity {
             .inject(this);
       ImageUtils.loadImage(this, R.drawable.placeholder, profilePic);
       initToolbar();
-
+      final ViewGroup root = (ViewGroup) findViewById(R.id.root);
       final ArrayList<String> sessionsNames = new ArrayList<>();
       CopperCardService service = restAdapter.create(CopperCardService.class);
       Call<ArrayList<Session>> call = service.getSessions();
@@ -93,6 +101,8 @@ public class LoginActivity extends AppCompatActivity {
             } else {
                sessionsNames.add("DawgItem");
             }
+            root.invalidate();
+            spinner.setVisibility(View.GONE);
          }
 
          @Override
@@ -110,19 +120,24 @@ public class LoginActivity extends AppCompatActivity {
             if (!email.getText()
                   .toString()
                   .isEmpty()) {
-               String uuid = UUID.randomUUID().toString();
+               String uuid = UUID.randomUUID()
+                     .toString();
                User user = new User(getSessionId(), email.getText()
                      .toString(), "", getPlattform(), uuid);
+               sharedPreferences.edit()
+                     .putString(KEY_UUID, uuid)
+                     .apply();
                CopperCardService service = restAdapter.create(CopperCardService.class);
-               Call<User> call = service.createUser(user.getName(), user.getPlatform(), user.getUuid());
+               Call<User> call =
+                     service.createUser(user.getName(), user.getPlatform(), user.getUuid());
                call.enqueue(new Callback<User>() {
                   @Override
                   public void onResponse(Response<User> response, Retrofit retrofit) {
-//                     String userId = response.body()
-//                           .getUserId();
+                     if (response != null) {
                      Toast.makeText(LoginActivity.this, response.body()
                            .getColor(), Toast.LENGTH_SHORT)
                            .show();
+                     }
                   }
 
                   @Override

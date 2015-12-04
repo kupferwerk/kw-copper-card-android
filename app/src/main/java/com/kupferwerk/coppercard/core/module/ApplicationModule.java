@@ -1,6 +1,7 @@
 package com.kupferwerk.coppercard.core.module;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 
 import javax.inject.Singleton;
 
@@ -12,12 +13,16 @@ import com.kupferwerk.coppercard.core.CrashTracker;
 @Module
 public class ApplicationModule {
 
+   private static final String FREELETICS_PREFERENCES = "coppercard_preferences";
    private Context context;
    private BaseApplication application;
+   private SharedPreferences sharedPreferences;
 
    public ApplicationModule(BaseApplication application) {
       this.application = application;
       this.context = application.getApplicationContext();
+      this.sharedPreferences =
+            application.getSharedPreferences(FREELETICS_PREFERENCES, Context.MODE_PRIVATE);
    }
 
    @Provides
@@ -38,6 +43,12 @@ public class ApplicationModule {
    @Singleton
    Context provideContext() {
       return context;
+   }
+
+   @Provides
+   @Singleton
+   SharedPreferences provideSharedPreferences() {
+      return sharedPreferences;
    }
 
    /* TODO: Add here more application specific provided objects. */
