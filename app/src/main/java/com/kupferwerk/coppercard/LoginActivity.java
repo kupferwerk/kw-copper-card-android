@@ -10,6 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.kupferwerk.coppercard.model.User;
+import com.kupferwerk.coppercard.session.SessionActivity;
 import com.kupferwerk.coppercard.utils.ImageUtils;
 
 import butterknife.Bind;
@@ -36,6 +37,9 @@ public class LoginActivity extends AppCompatActivity {
          Toast.makeText(this, "Please fill out everything! dawg", Toast.LENGTH_SHORT)
                .show();
       }
+
+      Intent intent = new Intent(this, SessionActivity.class);
+      startActivity(intent);
    }
 
    private String getPlattform() {

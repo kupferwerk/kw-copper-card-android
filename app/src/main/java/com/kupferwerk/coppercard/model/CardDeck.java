@@ -16,7 +16,8 @@ public class CardDeck {
 
     private List<String> cards = new ArrayList<>();
 
-    public CardDeck build(Context context, int presetId) {
+
+    public static CardDeck build(Context context, int presetId) {
         CardDeck deck = new CardDeck();
         int resId = -1;
         switch (presetId) {
@@ -34,4 +35,20 @@ public class CardDeck {
         deck.cards = Arrays.asList(context.getResources().getStringArray(resId));
         return deck;
     }
+
+    public int size() {
+        if (cards == null) {
+            return 0;
+        }
+        return cards.size();
+    }
+
+    public String get(int position) {
+        if (cards == null || cards.isEmpty()) {
+            return "";
+        }
+        return cards.get(position);
+
+    }
+
 }
