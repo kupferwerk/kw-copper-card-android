@@ -7,7 +7,7 @@
         android:color="@android:color/black"/>
 
     <corners
-        android:radius="@dimen/card_radius"
+        android:radius="@dimen/card_radius_small"
         />
 
 

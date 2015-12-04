@@ -18,5 +18,6 @@
     <string name="ios">iOS</string>
     <string name="android">Android</string>
     <string name="windows">Windows</string>
+    <string name="title_activity_session">Session</string>
 
 </resources>

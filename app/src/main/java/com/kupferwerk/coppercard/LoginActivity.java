@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.kupferwerk.coppercard.core.Injector;
 import com.kupferwerk.coppercard.core.webservice.CopperCardService;
 import com.kupferwerk.coppercard.model.User;
+import com.kupferwerk.coppercard.session.SessionActivity;
 import com.kupferwerk.coppercard.utils.ImageUtils;
 
 import javax.inject.Inject;
@@ -68,6 +69,9 @@ public class LoginActivity extends AppCompatActivity implements Callback<User> {
          Toast.makeText(this, "Please fill out everything! dawg", Toast.LENGTH_SHORT)
                .show();
       }
+
+      Intent intent = new Intent(this, SessionActivity.class);
+      startActivity(intent);
    }
 
    private String getPlattform() {
