@@ -1,0 +1,6 @@
+<resources>
+   <!-- enter your hockey app id here -->
+    <string name="hockey_app_id">1234567890abcdef1234567890abcdef</string>
+    <string name="base_url">@string/staging_base_url</string>
+    <string name="staging_base_url">http://staging.baseurl.example.com</string>
+</resources>
