@@ -5,6 +5,8 @@ import android.content.Context;
 import javax.inject.Singleton;
 
 import dagger.Component;
+
+import com.kupferwerk.coppercard.LoginActivity;
 import com.kupferwerk.coppercard.SplashScreen;
 import com.kupferwerk.coppercard.core.BaseApplication;
 
@@ -17,4 +19,6 @@ public interface AppComponent {
    Context context();
 
    void inject(SplashScreen splashScreen);
+
+   void inject(LoginActivity loginActivity);
 }
