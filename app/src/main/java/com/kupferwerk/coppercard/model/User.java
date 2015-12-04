@@ -5,68 +5,63 @@ import android.os.Parcelable;
 
 public class User implements Parcelable {
 
-    private String sessionId;
-    private String name;
-    private String image;
-    private String platform;
+   private String sessionId;
+   private String name;
+   private String image;
+   private String platform;
 
-    protected User(Parcel in) {
-        sessionId = in.readString();
-        name = in.readString();
-        image = in.readString();
-        platform = in.readString();
-    }
+   public User(String sessionId, String name, String image, String platform) {
+      this.sessionId = sessionId;
+      this.name = name;
+      this.image = image;
+      this.platform = platform;
+   }
 
-    public static final Creator<User> CREATOR = new Creator<User>() {
-        @Override
-        public User createFromParcel(Parcel in) {
-            return new User(in);
-        }
+   protected User(Parcel in) {
+      sessionId = in.readString();
+      name = in.readString();
+      image = in.readString();
+      platform = in.readString();
+   }
 
-        @Override
-        public User[] newArray(int size) {
-            return new User[size];
-        }
-    };
+   public static final Creator<User> CREATOR = new Creator<User>() {
+      @Override
+      public User createFromParcel(Parcel in) {
+         return new User(in);
+      }
 
-    public String getName() {
-        return name;
-    }
+      @Override
+      public User[] newArray(int size) {
+         return new User[size];
+      }
+   };
 
-    public void setName(String name) {
-        this.name = name;
-    }
+   public String getName() {
+      return name;
+   }
 
-    public String getImage() {
-        return image;
-    }
+   public String getImage() {
+      return image;
+   }
 
-    public void setImage(String image) {
-        this.image = image;
-    }
+   public String getPlatform() {
+      return platform;
+   }
 
-    public String getPlatform() {
-        return platform;
-    }
+   public String getSessionId() {
+      return sessionId;
+   }
 
-    public void setPlatform(String platform) {
-        this.platform = platform;
-    }
+   @Override
+   public int describeContents() {
+      return 0;
+   }
 
-    public String getSessionId() {
-        return sessionId;
-    }
-
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(sessionId);
-        dest.writeString(name);
-        dest.writeString(image);
-        dest.writeString(platform);
-    }
+   @Override
+   public void writeToParcel(Parcel dest, int flags) {
+      dest.writeString(sessionId);
+      dest.writeString(name);
+      dest.writeString(image);
+      dest.writeString(platform);
+   }
 }

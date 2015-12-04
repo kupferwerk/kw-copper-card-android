@@ -13,7 +13,7 @@ android {
 
    defaultConfig {
       applicationId "com.kupferwerk.coppercard"
-      minSdkVersion 16
+      minSdkVersion 21
       targetSdkVersion 23
       versionCode System.getenv("BUILD_NUMBER") as Integer ?: 0
       String versionNameString = System.getenv("BUILD_NUMBER") ?: "IDE"

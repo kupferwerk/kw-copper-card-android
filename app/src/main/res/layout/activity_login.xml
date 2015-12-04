@@ -56,15 +56,15 @@
       android:layout_height="40dp"
       android:layout_below="@id/login_form"
       android:layout_marginBottom="4dp"
-      android:layout_marginLeft="50dp"
-      android:layout_marginRight="50dp"
+      android:layout_marginLeft="40dp"
+      android:layout_marginRight="40dp"
       android:layout_marginTop="40dp"
       android:background="@drawable/orange_outline"
       android:checkedButton="@+id/offer"
       android:orientation="horizontal">
 
       <RadioButton
-         android:id="@+id/metric"
+         android:id="@+id/android"
          android:layout_width="0dp"
          android:layout_height="match_parent"
          android:layout_marginBottom="1dp"
@@ -78,7 +78,19 @@
          android:text="@string/android" />
 
       <RadioButton
-         android:id="@+id/imperial"
+         android:id="@+id/ios"
+         android:layout_width="0dp"
+         android:layout_height="match_parent"
+         android:layout_marginBottom="1dp"
+         android:layout_marginTop="1dp"
+         android:layout_weight="1"
+         android:background="@drawable/toggle_bg_selector"
+         android:button="@null"
+         android:gravity="center"
+         android:text="@string/ios" />
+
+      <RadioButton
+         android:id="@+id/windows"
          android:layout_width="0dp"
          android:layout_height="match_parent"
          android:layout_marginBottom="1dp"
@@ -88,7 +100,7 @@
          android:background="@drawable/toggle_bg_selector"
          android:button="@null"
          android:gravity="center"
-         android:text="@string/ios" />
+         android:text="@string/windows" />
    </RadioGroup>
 
    <Button

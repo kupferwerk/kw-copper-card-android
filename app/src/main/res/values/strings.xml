@@ -17,5 +17,6 @@
     </string>
     <string name="ios">iOS</string>
     <string name="android">Android</string>
+    <string name="windows">Windows</string>
 
 </resources>

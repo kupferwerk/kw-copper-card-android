@@ -27,7 +27,7 @@ public class CardDeck {
                 resId = R.array.sequence;
                 break;
             case TSHIRT:
-                resId = R.array.t_shirt;
+                resId = R.array.tshirt;
                 break;
         }
 
