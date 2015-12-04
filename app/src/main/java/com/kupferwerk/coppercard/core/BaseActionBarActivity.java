@@ -7,7 +7,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.kupferwerk.coppercard.appname.R;
+import com.kupferwerk.coppercard.R;
 import com.kupferwerk.coppercard.core.activitiy.AdjustStatusbar;
 
 /**

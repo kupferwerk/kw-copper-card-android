@@ -2,6 +2,9 @@ package com.kupferwerk.coppercard.core.module;
 
 import android.content.Context;
 
+import com.kupferwerk.coppercard.BuildConfig;
+import com.kupferwerk.coppercard.R;
+import com.kupferwerk.coppercard.core.logging.LoggingInterceptor;
 import com.squareup.okhttp.Cache;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.picasso.Picasso;
@@ -13,9 +16,6 @@ import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
-import com.kupferwerk.coppercard.appname.BuildConfig;
-import com.kupferwerk.coppercard.appname.R;
-import com.kupferwerk.coppercard.core.logging.LoggingInterceptor;
 import retrofit.GsonConverterFactory;
 import retrofit.Retrofit;
 
@@ -42,13 +42,15 @@ public class WebserviceModule {
                   .addConverterFactory(GsonConverterFactory.create());
       if (BuildConfig.DEBUG) {
          OkHttpClient client = new OkHttpClient();
-         client.interceptors().add(new LoggingInterceptor());
+         client.interceptors()
+               .add(new LoggingInterceptor());
       }
       return builder.build();
    }
 
    private OkHttpClient getHttpClient(Context context) {
-      final File cacheDirectory = new File(context.getCacheDir().getAbsolutePath(), "HttpCache");
+      final File cacheDirectory = new File(context.getCacheDir()
+            .getAbsolutePath(), "HttpCache");
       final Cache cache = new Cache(cacheDirectory, CACHE_SIZE);
       final OkHttpClient client = new OkHttpClient();
       client.setCache(cache);

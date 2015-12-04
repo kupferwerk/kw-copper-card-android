@@ -8,13 +8,14 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
-import com.kupferwerk.coppercard.appname.R;
+import com.kupferwerk.coppercard.R;
 
 public class AdjustStatusbar {
 
    @TargetApi (Build.VERSION_CODES.KITKAT)
    public static void addColorAndHeight(@NonNull Activity activity) {
-      if (!activity.getResources().getBoolean(R.bool.should_color_status_bar)) {
+      if (!activity.getResources()
+            .getBoolean(R.bool.should_color_status_bar)) {
          return;
       }
       View statusBar = activity.findViewById(R.id.statusBarBackground);
@@ -26,7 +27,8 @@ public class AdjustStatusbar {
             WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
       int statusBarHeight = getStatusBarHeight(activity);
       if (statusBarHeight != 0) {
-         int color = activity.getResources().getColor(R.color.primary_dark);
+         int color = activity.getResources()
+               .getColor(R.color.primary_dark);
          statusBar.getLayoutParams().height = +statusBarHeight;
          statusBar.setBackgroundColor(color);
          statusBar.setVisibility(View.VISIBLE);
@@ -37,10 +39,11 @@ public class AdjustStatusbar {
 
    private static int getStatusBarHeight(Activity activity) {
       int result = 0;
-      int resourceId =
-            activity.getResources().getIdentifier("status_bar_height", "dimen", "android");
+      int resourceId = activity.getResources()
+            .getIdentifier("status_bar_height", "dimen", "android");
       if (resourceId > 0) {
-         result = activity.getResources().getDimensionPixelSize(resourceId);
+         result = activity.getResources()
+               .getDimensionPixelSize(resourceId);
       }
       return result;
    }

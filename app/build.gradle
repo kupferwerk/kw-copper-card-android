@@ -12,7 +12,7 @@ android {
    buildToolsVersion "23.0.1"
 
    defaultConfig {
-      applicationId "packagename.app.com.appname"
+      applicationId "com.kupferwerk.coppercard"
       minSdkVersion 16
       targetSdkVersion 23
       versionCode System.getenv("BUILD_NUMBER") as Integer ?: 0

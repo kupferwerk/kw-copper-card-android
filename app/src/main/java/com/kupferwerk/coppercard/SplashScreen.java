@@ -2,14 +2,13 @@ package com.kupferwerk.coppercard;
 
 import android.os.Bundle;
 
-import com.kupferwerk.coppercard.appname.R;
+import com.kupferwerk.coppercard.core.BaseActionBarActivity;
+import com.kupferwerk.coppercard.core.CrashTracker;
+import com.kupferwerk.coppercard.core.Injector;
 import com.squareup.picasso.Picasso;
 
 import javax.inject.Inject;
 
-import com.kupferwerk.coppercard.core.BaseActionBarActivity;
-import com.kupferwerk.coppercard.core.CrashTracker;
-import com.kupferwerk.coppercard.core.Injector;
 import retrofit.Retrofit;
 
 public class SplashScreen extends BaseActionBarActivity {
@@ -31,6 +30,8 @@ public class SplashScreen extends BaseActionBarActivity {
    @Override
    protected void onCreate(Bundle savedInstanceState) {
       super.onCreate(savedInstanceState);
-      Injector.getAppComponent().inject(this);
+      Injector.getAppComponent()
+            .inject(this);
+      LoginActivity.start(this);
    }
 }

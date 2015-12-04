@@ -4,14 +4,14 @@ import android.app.Activity;
 import android.app.Application;
 import android.os.Bundle;
 
+import com.kupferwerk.coppercard.BuildConfig;
+import com.kupferwerk.coppercard.R;
+
 import net.hockeyapp.android.CrashManager;
 import net.hockeyapp.android.CrashManagerListener;
 import net.hockeyapp.android.Tracking;
 import net.hockeyapp.android.UpdateActivity;
 import net.hockeyapp.android.UpdateManager;
-
-import com.kupferwerk.coppercard.appname.BuildConfig;
-import com.kupferwerk.coppercard.appname.R;
 
 public class CrashTracker implements Application.ActivityLifecycleCallbacks {
    private final Application application;
@@ -50,7 +50,8 @@ public class CrashTracker implements Application.ActivityLifecycleCallbacks {
    @Override
    public void onActivityResumed(final Activity activity) {
       final boolean shouldShowUpdates = BuildConfig.DEBUG && !BuildConfig.IS_IDE_BUILD;
-      final boolean isUpdateActivity = !activity.getClass().equals(UpdateActivity.class);
+      final boolean isUpdateActivity = !activity.getClass()
+            .equals(UpdateActivity.class);
       if (shouldShowUpdates && isUpdateActivity) {
          UpdateManager.register(activity, application.getString(R.string.hockey_app_id));
       }
