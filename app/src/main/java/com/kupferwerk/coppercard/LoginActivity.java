@@ -133,11 +133,6 @@ public class LoginActivity extends AppCompatActivity {
                call.enqueue(new Callback<User>() {
                   @Override
                   public void onResponse(Response<User> response, Retrofit retrofit) {
-                     if (response != null) {
-                     Toast.makeText(LoginActivity.this, response.body()
-                           .getColor(), Toast.LENGTH_SHORT)
-                           .show();
-                     }
                   }
 
                   @Override
