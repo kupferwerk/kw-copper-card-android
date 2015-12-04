@@ -29,9 +29,11 @@ public class LoginActivity extends AppCompatActivity {
 
    @OnClick (R.id.signIn)
    protected void onSignIn() {
-      if (email.getText() != null && getSessionId() != null) {
+      if (email.getText() != null && !getSessionId().equalsIgnoreCase("")) {
          User user = new User(getSessionId(), email.getText()
                .toString(), "", getPlattform());
+         Toast.makeText(this, "YO FKin made it daaawg", Toast.LENGTH_SHORT)
+               .show();
       } else {
          Toast.makeText(this, "Please fill out everything! dawg", Toast.LENGTH_SHORT)
                .show();
