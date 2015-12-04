@@ -110,15 +110,31 @@
             android:text="@string/windows" />
       </RadioGroup>
 
-      <Button
-         android:id="@+id/signIn"
-         style="?android:textAppearanceSmall"
+      <TextView
+         android:id="@+id/txtTitleSessions"
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
-         android:layout_alignParentBottom="true"
-         android:layout_marginTop="16dp"
-         android:text="@string/action_sign_in"
+         android:layout_below="@+id/toggle"
+         android:layout_marginTop="24dp"
+         android:text="Active Sessions:"
          android:textStyle="bold" />
+
+      <ListView
+         android:id="@+id/listView"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/txtTitleSessions"
+         android:layout_marginTop="8dp" />
+
+      <!--<Button-->
+      <!--android:id="@+id/signIn"-->
+      <!--style="?android:textAppearanceSmall"-->
+      <!--android:layout_width="match_parent"-->
+      <!--android:layout_height="wrap_content"-->
+      <!--android:layout_alignParentBottom="true"-->
+      <!--android:layout_marginTop="16dp"-->
+      <!--android:text="@string/action_sign_in"-->
+      <!--android:textStyle="bold" />-->
 
    </RelativeLayout>
 </LinearLayout>

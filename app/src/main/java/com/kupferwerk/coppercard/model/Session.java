@@ -5,49 +5,55 @@ import android.os.Parcelable;
 
 public class Session implements Parcelable {
 
-    private String sessionId;
-    private String userId;
-    private int presetId;
+   private String sessionId;
+   private String userId;
+   private int presetId;
 
-    protected Session(Parcel in) {
-        sessionId = in.readString();
-        userId = in.readString();
-        presetId = in.readInt();
-    }
+   public String getName() {
+      return name;
+   }
 
-    public static final Creator<Session> CREATOR = new Creator<Session>() {
-        @Override
-        public Session createFromParcel(Parcel in) {
-            return new Session(in);
-        }
+   private String name;
 
-        @Override
-        public Session[] newArray(int size) {
-            return new Session[size];
-        }
-    };
+   protected Session(Parcel in) {
+      sessionId = in.readString();
+      userId = in.readString();
+      presetId = in.readInt();
+   }
 
-    public String getSessionId() {
-        return sessionId;
-    }
+   public static final Creator<Session> CREATOR = new Creator<Session>() {
+      @Override
+      public Session createFromParcel(Parcel in) {
+         return new Session(in);
+      }
 
-    public String getUserId() {
-        return userId;
-    }
+      @Override
+      public Session[] newArray(int size) {
+         return new Session[size];
+      }
+   };
 
-    public int getPresetId() {
-        return presetId;
-    }
+   public String getSessionId() {
+      return sessionId;
+   }
 
-    @Override
-    public int describeContents() {
-        return 0;
-    }
+   public String getUserId() {
+      return userId;
+   }
 
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(sessionId);
-        dest.writeString(userId);
-        dest.writeInt(presetId);
-    }
+   public int getPresetId() {
+      return presetId;
+   }
+
+   @Override
+   public int describeContents() {
+      return 0;
+   }
+
+   @Override
+   public void writeToParcel(Parcel dest, int flags) {
+      dest.writeString(sessionId);
+      dest.writeString(userId);
+      dest.writeInt(presetId);
+   }
 }
