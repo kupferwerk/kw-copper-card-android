@@ -17,17 +17,33 @@ package com.kupferwerk.planningpoker;
 import android.app.Activity;
 import android.os.Bundle;
 
+import com.kupferwerk.planningpoker.retrofit.RetroService;
+
+import retrofit.GsonConverterFactory;
+import retrofit.Retrofit;
+
 /*
  * MainActivity class that loads MainFragment
  */
 public class StartSessionActivity extends Activity {
-    /**
-     * Called when the activity is first created.
-     */
+   /**
+    * Called when the activity is first created.
+    */
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_start_session);
-    }
+   @Override
+   public void onCreate(Bundle savedInstanceState) {
+      super.onCreate(savedInstanceState);
+      setContentView(R.layout.activity_start_session);
+
+      Retrofit retrofit = new Retrofit.Builder().baseUrl("https://api.stackexchange.com")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build();
+
+      // prepare call in Retrofit 2.0
+      RetroService service = retrofit.create(RetroService.class);
+
+//      Call<StackOverflowQuestions> call = service.getData();
+//      //asynchronous call
+//      call.enqueue();
+   }
 }
