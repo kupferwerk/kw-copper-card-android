@@ -1,9 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<fragment android:id="@+id/details_fragment"
-          android:name="com.kupferwerk.planningpoker.SessionFragment"
-          xmlns:android="http://schemas.android.com/apk/res/android"
-          xmlns:tools="http://schemas.android.com/tools"
-          android:layout_width="match_parent"
-          android:layout_height="match_parent"
-          tools:context=".session.SessionActivity"
-          tools:deviceIds="tv"/>
+<RelativeLayout
+    android:id="@+id/details_fragment"
+    android:name="com.kupferwerk.planningpoker.SessionFragment"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:deviceIds="tv">
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/actions"/>
+
+    <LinearLayout
+        android:id="@+id/actions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="14dp"
+            android:text="Next Round"
+            android:textSize="24sp"
+            />
+
+        <Button
+            android:id="@+id/close"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="14dp"
+            android:text="Close Session"
+            android:textSize="24sp"
+            />
+    </LinearLayout>
+</RelativeLayout>

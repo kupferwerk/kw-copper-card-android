@@ -16,9 +16,8 @@ package com.kupferwerk.planningpoker.session;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
 
+import com.kupferwerk.planningpoker.R;
 import com.kupferwerk.planningpoker.model.User;
 
 import java.util.List;
@@ -30,13 +29,12 @@ public class SessionActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_start_session);
+        setContentView(R.layout.activity_start_session);
 
     }
 
     private void initList(List<User> users) {
 //        RecyclerView list = (RecyclerView) findViewById(R.id.user_list);
-
 //        list.setLayoutManager(new GridLayoutManager(this, COLUMNS));
 
     }
