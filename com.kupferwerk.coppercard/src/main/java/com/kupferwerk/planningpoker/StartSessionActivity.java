@@ -42,8 +42,8 @@ public class StartSessionActivity extends Activity {
       // prepare call in Retrofit 2.0
       RetroService service = retrofit.create(RetroService.class);
 
-//      Call<StackOverflowQuestions> call = service.getData();
-//      //asynchronous call
-//      call.enqueue();
+      //      Call<StackOverflowQuestions> call = service.getData();
+      //      //asynchronous call
+      //      call.enqueue();
    }
 }
