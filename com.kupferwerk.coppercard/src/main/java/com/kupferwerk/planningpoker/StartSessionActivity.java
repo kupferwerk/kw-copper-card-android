@@ -21,9 +21,6 @@ import android.os.Bundle;
  * MainActivity class that loads MainFragment
  */
 public class StartSessionActivity extends Activity {
-    /**
-     * Called when the activity is first created.
-     */
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
