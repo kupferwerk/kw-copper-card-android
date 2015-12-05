@@ -47,20 +47,20 @@ public class BrowseErrorActivity extends Activity {
     }
 
     private void testError() {
-        mErrorFragment = new ErrorFragment();
-        getFragmentManager().beginTransaction().add(R.id.main_browse_fragment, mErrorFragment).commit();
-
-        mSpinnerFragment = new SpinnerFragment();
-        getFragmentManager().beginTransaction().add(R.id.main_browse_fragment, mSpinnerFragment).commit();
-
-        final Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                getFragmentManager().beginTransaction().remove(mSpinnerFragment).commit();
-                mErrorFragment.setErrorContent();
-            }
-        }, TIMER_DELAY);
+//        mErrorFragment = new ErrorFragment();
+//        getFragmentManager().beginTransaction().add(R.id.main_browse_fragment, mErrorFragment).commit();
+//
+//        mSpinnerFragment = new SpinnerFragment();
+//        getFragmentManager().beginTransaction().add(R.id.main_browse_fragment, mSpinnerFragment).commit();
+//
+//        final Handler handler = new Handler();
+//        handler.postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                getFragmentManager().beginTransaction().remove(mSpinnerFragment).commit();
+//                mErrorFragment.setErrorContent();
+//            }
+//        }, TIMER_DELAY);
     }
 
     static public class SpinnerFragment extends Fragment {

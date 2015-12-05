@@ -12,7 +12,15 @@
     <color name="black">#59000000</color>
     <color name="white">#FFFFFF</color>
     <color name="orange_transparent">#AAFADCA7</color>
-    <color name="orange">#FADCA7</color>
+    <!--<color name="orange">#FADCA7</color>-->
     <color name="yellow">#EEFF41</color>
     <color name="default_background">#3d3d3d</color>
+
+
+    <color name="primary">@color/darklight</color>
+    <color name="primary_dark">@color/dark</color>
+    <color name="accent">@color/orange</color>
+    <color name="dark" type="color">#222222</color>
+    <color name="darklight" type="color">#414141</color>
+    <color name="orange" type="color">#FF7800</color>
 </resources>
