@@ -5,17 +5,18 @@
 
 
     <ImageView
-        android:layout_width="156dp"
-        android:layout_height="156dp"
-        android:layout_margin="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-54dp"
+        android:layout_marginTop="-54dp"
         android:alpha="0.75"
         android:src="@drawable/copper"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="172dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginLeft="128dp"
+        android:layout_marginTop="28dp"
         android:shadowColor="#BB131313"
         android:shadowDx="4"
         android:shadowDy="4"
@@ -28,7 +29,7 @@
                   android:layout_width="match_parent"
                   android:layout_height="wrap_content"
                   android:layout_marginLeft="32dp"
-                  android:layout_marginTop="156dp"
+                  android:layout_marginTop="128dp"
                   android:orientation="vertical"
         >
 
@@ -50,16 +51,15 @@
             android:id="@+id/toggle"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_marginBottom="4dp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="8dp"
             android:background="@drawable/orange_outline"
             android:checkedButton="@+id/offer"
             android:orientation="horizontal">
 
             <RadioButton
-                android:id="@+id/android"
+                android:id="@+id/fibonacci"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="1dp"
@@ -73,7 +73,7 @@
                 android:text="Fibonacci"/>
 
             <RadioButton
-                android:id="@+id/ios"
+                android:id="@+id/sequence"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="1dp"
@@ -85,7 +85,7 @@
                 android:text="Sequence"/>
 
             <RadioButton
-                android:id="@+id/windows"
+                android:id="@+id/shirts"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="1dp"
@@ -97,6 +97,15 @@
                 android:gravity="center"
                 android:text="T-Shrts"/>
         </RadioGroup>
+
+        <Button
+            android:id="@+id/start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:text="Start estimation"/>
     </LinearLayout>
 
 </FrameLayout>
