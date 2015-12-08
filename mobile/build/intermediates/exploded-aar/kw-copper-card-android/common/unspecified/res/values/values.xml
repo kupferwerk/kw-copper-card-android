@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/Users/Kyp/Developing/workspace/kw-copper-card-android/common/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string-array name="fibonacci">
+      <item>0</item>
+      <item>0.5</item>
+      <item>1</item>
+      <item>2</item>
+      <item>3</item>
+      <item>5</item>
+      <item>8</item>
+      <item>13</item>
+      <item>20</item>
+      <item>40</item>
+      <item>100</item>
+      <item>:coffee:</item>
+      <item>:noplan:</item>
+   </string-array>
+    <string-array name="sequence">
+      <item>0</item>
+      <item>0.5</item>
+      <item>1</item>
+      <item>2</item>
+      <item>3</item>
+      <item>4</item>
+      <item>5</item>
+      <item>6</item>
+      <item>7</item>
+      <item>8</item>
+      <item>9</item>
+      <item>10</item>
+      <item>11</item>
+      <item>12</item>
+      <item>13</item>
+      <item>14</item>
+      <item>15</item>
+      <item>16</item>
+      <item>17</item>
+      <item>18</item>
+      <item>19</item>
+      <item>20</item>
+      <item>:coffee:</item>
+      <item>:noplan:</item>
+   </string-array>
+    <string-array name="tshirt">
+      <item>s</item>
+      <item>m</item>
+      <item>l</item>
+      <item>xl</item>
+      <item>xxl</item>
+      <item>xxxl</item>
+      <item>:coffee:</item>
+      <item>:noplan:</item>
+   </string-array>
+    <!-- From: file:/Users/Kyp/Developing/workspace/kw-copper-card-android/common/src/main/res/values/ids.xml -->
+    <eat-comment/>
+    <item name="img_header" type="id"/>
+    <item name="img_value" type="id"/>
+    <item name="txt_header" type="id"/>
+    <item name="txt_value" type="id"/>
+    <!-- From: file:/Users/Kyp/Developing/workspace/kw-copper-card-android/common/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="app_name">Planning Poker</string>
+    <string name="base_url">http://coppercards-twitterstream2.rhcloud.com/</string>
+    <string name="coffee_mug">:coffee:</string>
+    <string name="no_idea">:noplan:</string>
+</resources>

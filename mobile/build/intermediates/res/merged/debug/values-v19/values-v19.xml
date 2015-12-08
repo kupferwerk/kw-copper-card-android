@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/Users/Kyp/Developing/workspace/kw-copper-card-android/mobile/src/main/res/values-v19/version_configs.xml -->
+    <eat-comment/>
+    <bool name="should_color_status_bar">true</bool>
+</resources>

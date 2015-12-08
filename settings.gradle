@@ -1,1 +1,1 @@
-include ':app', ':com.kupferwerk.coppercard'
+include ':mobile', ':admin', ':common'

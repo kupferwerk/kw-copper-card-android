@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <solid
+        android:color="@android:color/black"/>
+
+    <corners
+        android:radius="@dimen/card_radius_small"
+        />
+
+
+</shape><!-- From: file:/Users/Kyp/Developing/workspace/kw-copper-card-android/mobile/src/main/res/drawable/bg_card_header.xml -->
